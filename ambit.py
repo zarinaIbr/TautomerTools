@@ -17,7 +17,7 @@ def main(i_sdf, o_sdf, a, b, c, l, m, n, r, t, z):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Tautomer_chemaxon")
+    parser = argparse.ArgumentParser(description="Tautomer_ambit")
     parser.add_argument("-i", "--input_file", type=str, required=True, help="Input SDF file")
     parser.add_argument("-o", "--output_file", type=str, required=True, help="Output SDF file")
     parser.add_argument("-a", "--algorithm", type=str, default='comb')
