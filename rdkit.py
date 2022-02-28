@@ -1,5 +1,4 @@
 import argparse
-from CGRtools import SDFWrite
 from rdkit.Chem.MolStandardize.rdMolStandardize import CanonicalTautomer
 from rdkit.Chem import SDMolSupplier, SDWriter
 
