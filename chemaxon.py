@@ -18,7 +18,7 @@ def main(i_sdf, o_sdf, c, n, g, M, d, D, m, l, H, a, C, e, P, T, L, E, s, r):
     exit = call(params1)
     if exit != 0:
         raise ValueError('Conversion SDF to MOL format didnt work')
-    params2 = ["cxcalc", "tautomers", "-f", "sdf", str(file), "-c", c, "-n", n, "-g", g, "-M", M, "d", d, "D", D,
+    params2 = ["cxcalc", "tautomers", "-f", "sdf", file, "-c", c, "-n", n, "-g", g, "-M", M, "d", d, "D", D,
                "m", m, "l", l, "H", H, "a", a, "C", C, "e", e, "P", P, "T", T, "L", L, "E", E, "s", s, "r", r]
     with open(o_sdf, 'w') as f:
         call(params2, stdout=f)
@@ -27,8 +27,8 @@ def main(i_sdf, o_sdf, c, n, g, M, d, D, m, l, H, a, C, e, P, T, L, E, s, r):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Tautomer_chemaxon")
-    parser.add_argument("-i", "--input_file", type=str, required=True, help="Input SDF file")
-    parser.add_argument("-o", "--output_file", type=str, required=True, help="Output SDF file")
+    parser.add_argument("-i", "--input_file", required=True, help="Input SDF file")
+    parser.add_argument("-o", "--output_file", required=True, help="Output SDF file")
     parser.add_argument("-с", "--canonical", type=str, default=False)
     parser.add_argument("-n", "--normal", type=str, default=False)
     parser.add_argument("-g", "--generic", type=str, default=False)
