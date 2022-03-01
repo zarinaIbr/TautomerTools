@@ -18,8 +18,8 @@ def main(i_sdf, o_sdf, c, n, g, M, d, D, m, l, H, a, C, e, P, T, L, E, s, r):
     exit = call(params1)
     if exit != 0:
         raise ValueError('Conversion SDF to MOL format didnt work')
-    params2 = ['cxcalc', 'tautomers', '-f', 'sdf', file, '-c', c, '-n', n, '-g', g, '-M', M, 'd', d, 'D', D,
-               'm', m, 'l', l, 'H', H, 'a', a, 'C', C, 'e', e, 'P', P, 'T', T, 'L', L, 'E', E, 's', s, 'r', r]
+    params2 = ["cxcalc", "tautomers", "-f", "sdf", str(file), "-c", c, "-n", n, "-g", g, "-M", M, "d", d, "D", D,
+               "m", m, "l", l, "H", H, "a", a, "C", C, "e", e, "P", P, "T", T, "L", L, "E", E, "s", s, "r", r]
     with open(o_sdf, 'w') as f:
         call(params2, stdout=f)
     rmtree(work_dir)
