@@ -1,6 +1,6 @@
 # TautomerTools
 ## ChemAxon
-python chemaxon.py -i inp_sdf -o out_sdf
+python chemaxon.py -i inp_sdf -o out_sdf -M True
 ## Ambit
 python ambit.py -i inp_sdf -o out_sdf
 ## Rdkit
